@@ -26,6 +26,7 @@ class Main extends PluginBase implements listener {
     $p = $event->getPlayer();
     $l = $p->getLevel();
     if ($p->getItemInHand ()->getId () == Item::SLIMEBALL) {
+      $p->sendPopup(TF::AQUA . "Fireworks");
       $l->addParticle (new MobSpawnParticle (new Vector3 ($p->x, $p->y+0.5, $p->z)));
       $l->addParticle (new MobSpawnParticle (new Vector3 ($p->x, $p->y+1, $p->z)));
       $l->addParticle (new MobSpawnParticle (new Vector3 ($p->x, $p->y+1.5, $p->z)));
@@ -61,11 +62,36 @@ class Main extends PluginBase implements listener {
       $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
       $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
       $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
+      $l->addParticle (new LavaParticle (new Vector3 ($p->x, $p->y+15, $p->z)));
     }
-  }
-
-  public function onPlayerJoin (PlayerJoinEvent $event) {
-    $slimeball = Item::get (Item::SLIMEBALL);
-    $slimeball->setCustomName(TF::AQUA . "Fireworks");
   }
 }
