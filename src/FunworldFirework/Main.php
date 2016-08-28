@@ -1,5 +1,7 @@
 <?php
 
+namespace FunworldFirework;
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
