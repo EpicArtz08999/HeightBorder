@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener{
     $this->getServer ()->getPluginManager ()->registerEvents ($this, $this);
   }
 
-  public function onLogin (PlayerLoginHeldEvent $event) {
+  public function onLogin (PlayerLoginEvent $event) {
     $p = $event->getPlayer ();
     $this->getServer ()->dispatchCommand (new ConsoleCommandSender(), "rca " . $p->getName () . " sb on");
   }
