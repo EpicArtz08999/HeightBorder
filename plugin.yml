@@ -1,6 +1,6 @@
 ---
-name: FunworldFirework
-main: FunworldFirework\Main
+name: joincommands
+main: joincommands\Main
 api: [2.0.0]
 author: Sandertv
 version: 0.1
