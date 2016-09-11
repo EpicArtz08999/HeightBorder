@@ -18,7 +18,7 @@ class LoginTask extends PluginTask implements Listener{
   
   private $plugin;
   private $p;
-  public function __construct(EventListener $plugin, Player $p) {
+  public function __construct(Main $plugin, Player $p) {
     parent::__construct($plugin);
     $this->plugin = $plugin;
     $this->player = $p;
