@@ -20,6 +20,7 @@ class Main extends PluginBase implements Listener{
   public function onLogin (PlayerLoginEvent $event) {
     $p = $event->getPlayer ();
     $this->getServer ()->dispatchCommand (new ConsoleCommandSender(), "rca " . $p->getName () . " sb on");
+    $this->getServer ()->dispatchCommand (new ConsoleCommandSender(), "walkp clear " . $p->getName ());
   }
   
 }
