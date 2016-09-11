@@ -10,6 +10,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerLoginEvent;
+use joincommands\LoginTask;
 
 class Main extends PluginBase implements Listener{
 
