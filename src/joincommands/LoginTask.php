@@ -30,6 +30,8 @@ class LoginTask extends PluginTask implements Listener{
   
   public function onRun($tick) {
     $this->getPlugin ()->getServer ()->dispatchCommand(new ConsoleCommandSender (), "rca " . $this->player->getName () . " sb on");
-    $this->getPlugin ()->getServer ()->dispatchCommand(new ConsoleCommandSender (), "walkp clear " . $this->player->getName ());
+    if (!is_numeric ($this->player->getLastPlayed())) {
+      $this->getPlugin ()->getServer ()->dispatchCommand(new ConsoleCommandSender (), "walkp clear " . $this->player->getName ());
+    }
   }
 }
