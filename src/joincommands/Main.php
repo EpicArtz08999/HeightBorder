@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener{
 
   public function onLogin (PlayerLoginEvent $event) {
     $p = $event->getPlayer ();
-    $this->getServer()->getScheduler()->scheduleDelayedTask(new LoginTask($this, $p), 20);
+    $this->getServer()->getScheduler()->scheduleDelayedTask(new LoginTask($this, $p), 240);
   }
   
 }
