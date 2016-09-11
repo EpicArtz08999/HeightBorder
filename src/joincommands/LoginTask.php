@@ -1,6 +1,6 @@
 <?php
 
-namespace FWAcoreclasses;
+namespace joincommands;
 
 use pocketmine\scheduler\PluginTask;
 use joincommands\Main;
