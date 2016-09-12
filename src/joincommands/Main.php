@@ -34,7 +34,7 @@ class Main extends PluginBase implements Listener{
   } elseif ($coin == Item::GOLD_INGOT) {
     $p->getItemInHand ()->setCustomName (TF::YELLOW . "Gold");
   } elseif ($coin == Item::GOLD_BLOCK) {
-    $p->getItemInHand ()>setCustomName (TF::YELLOW . "Block of Gold");
+    $p->getItemInHand ()->setCustomName (TF::YELLOW . "Block of Gold");
   }
  }
 }
