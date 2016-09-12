@@ -23,18 +23,13 @@ class Main extends PluginBase implements Listener{
 
   public function onLogin (PlayerLoginEvent $event) {
     $p = $event->getPlayer ();
-    $this->getServer()->getScheduler()->scheduleDelayedTask(new LoginTask($this, $p), 240);
+    $this->getServer()->getScheduler()->scheduleDelayedTask(new LoginTask($this, $p), 400);
   }
 
   public function onHeld (PlayerItemHeldEvent $event) {
   $p = $event->getPlayer();
-  $coin = $p->getItemInHand ()->getId ();
-  if ($coin == Item::DOUBLE_PLANT) {
-    $p->sendPopup (TF::YELLOW . "Coin");
-  } elseif ($coin == Item::GOLD_INGOT) {
-    $p->sendPopup(TF::YELLOW . "Gold");
-  } elseif ($coin == Item::GOLD_BLOCK) {
-    $p->sendPopup (TF::YELLOW . "Block of Gold");
+  $item = $event->getItem()->getId();
+  if($item == 175) {
+    $item->setCustomName(TextFormat::YELLOW . "Coin");
   }
- }
 }
