@@ -35,4 +35,5 @@ class Main extends PluginBase implements Listener{
   } elseif ($coin == Item::GOLD_BLOCK) {
     $coin->setCustomName (TF::YELLOW . "Block of Gold");
   }
+ }
 }
