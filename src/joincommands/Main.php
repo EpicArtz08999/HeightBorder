@@ -27,11 +27,12 @@ class Main extends PluginBase implements Listener{
   }
 
   public function onHeld (PlayerItemHeldEvent $event) {
-  $coin = Item::get (Item::DOUBLE_PLANT);
-  $coin->setCustomName (TF::YELLOW . "Coin");
-  $gold = Item::get (Item::GOLD_INGOT);
-  $gold->setCustomName (TF::YELLOW . "Gold");
-  $goldblock = Item::get (Item::GOLD_BLOCK);
-  $goldblock->setCustomName (TF::YELLOW . "Block of Gold");
+  $coin = $p->getItemInHand ()->getId ();
+  if ($coin == Item::DOUBLE_PLANT) {
+    $coin->setCustomName (TF::YELLOW . "Coin");
+  } elseif ($coin == Item::GOLD_INGOT) {
+    $coin->setCustomName (TF::YELLOW . "Gold");
+  } elseif ($coin == Item::GOLD_BLOCK) {
+    $coin->setCustomName (TF::YELLOW . "Block of Gold");
   }
 }
