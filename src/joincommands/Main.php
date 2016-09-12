@@ -30,11 +30,11 @@ class Main extends PluginBase implements Listener{
   $p = $event->getPlayer();
   $coin = $p->getItemInHand ()->getId ();
   if ($coin == Item::DOUBLE_PLANT) {
-    $coin->setCustomName (TF::YELLOW . "Coin");
+    $p->getItemInHand ()->setCustomName (TF::YELLOW . "Coin");
   } elseif ($coin == Item::GOLD_INGOT) {
-    $coin->setCustomName (TF::YELLOW . "Gold");
+    $p->getItemInHand ()->setCustomName (TF::YELLOW . "Gold");
   } elseif ($coin == Item::GOLD_BLOCK) {
-    $coin->setCustomName (TF::YELLOW . "Block of Gold");
+    $p->getItemInHand ()>setCustomName (TF::YELLOW . "Block of Gold");
   }
  }
 }
