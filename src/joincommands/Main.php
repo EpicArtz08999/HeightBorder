@@ -27,6 +27,7 @@ class Main extends PluginBase implements Listener{
   }
 
   public function onHeld (PlayerItemHeldEvent $event) {
+  $p = $event->getPlayer();
   $coin = $p->getItemInHand ()->getId ();
   if ($coin == Item::DOUBLE_PLANT) {
     $coin->setCustomName (TF::YELLOW . "Coin");
