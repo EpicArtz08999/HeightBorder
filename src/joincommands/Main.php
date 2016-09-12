@@ -10,7 +10,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerLoginEvent;
-use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\Item;
 use joincommands\LoginTask;
 use pocketmine\utils\TextFormat as TF;
@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener{
     $this->getServer()->getScheduler()->scheduleDelayedTask(new LoginTask($this, $p), 240);
   }
 
-  public function onJoin (PlayerJoinEvent $event) {
+  public function onHeld (PlayerItemHeldEvent $event) {
   $coin = Item::get (Item::DOUBLE_PLANT);
   $coin->setCustomName (TF::YELLOW . "Coin");
   $gold = Item::get (Item::GOLD_INGOT);
