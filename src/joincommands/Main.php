@@ -30,7 +30,7 @@ class Main extends PluginBase implements Listener{
     $p = $event->getPlayer();
     $item = $event->getItem()->getId();
     if($item == 175) {
-      $item->setCustomName(TextFormat::YELLOW . "Coin");
+      $event->getItem ()->setCustomName(TextFormat::YELLOW . "Coin");
     }
   }
 }
