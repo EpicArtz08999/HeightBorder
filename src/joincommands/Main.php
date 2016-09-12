@@ -31,7 +31,7 @@ class Main extends PluginBase implements Listener{
   $coin->setCustomName (TF::YELLOW . "Coin");
   $gold = Item::get (Item::GOLD_INGOT);
   $gold->setCustomName (TF::YELLOW . "Gold");
-  $goldblock = Item::get (Item::GOLD);
+  $goldblock = Item::get (Item::GOLD_BLOCK);
   $goldblock->setCustomName (TF::YELLOW . "Block of Gold");
   }
 }
