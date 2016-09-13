@@ -28,9 +28,8 @@ class Main extends PluginBase implements Listener{
 
   public function onHeld (PlayerItemHeldEvent $event) {
     $p = $event->getPlayer();
-    $item = $event->getItem()->getId();
-    if($item == 175) {
-      $event->getItem ()->setCustomName(TF::YELLOW . "Coin");
+    $item = Item::get (175, 0, 1);
+    $item->setCustomName(TF::YELLOW . "Coin");
     }
   }
 }
