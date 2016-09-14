@@ -27,8 +27,8 @@ class Main extends PluginBase implements Listener{
   }
 
   public function onHeld (PlayerItemHeldEvent $event) {
-  $p = $event->getName();
-  foreach ($event->getPlayer ()->getContents () as $coin) {
+  $p = $event->getPlayer();
+  foreach ($p->getInventory ()->getContents () as $coin) {
    switch ($coin->getId ()) {
     case "175":
       $item = Item::get (175, 0, $coin->getCount ());
