@@ -10,7 +10,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerLoginEvent;
-use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\item\Item;
 use joincommands\LoginTask;
 use pocketmine\utils\TextFormat as TF;
@@ -26,12 +26,31 @@ class Main extends PluginBase implements Listener{
     $this->getServer()->getScheduler()->scheduleDelayedTask(new LoginTask($this, $p), 400);
   }
 
-  public function onHeld (PlayerJoinEvent $event) {
-    $item = Item::get (175, 0, 1);
-    $item->setCustomName("Coin");
-    $item2 = Item::get (266, 0, 1);
-    $item2->setCustomName("Gold bar");
-    $item3 = Item::get (41, 0, 1);
-    $item3->setCustomName("Gold block");
+  public function onHeld (PlayerItemHeldEvent $event) {
+  $p = $event->getName();
+  foreach ($event->getPlayer ()->getContents () as $coin) {
+   switch ($coin->getId ()) {
+    case "175":
+      $item = Item::get (175, 0, $coin->getCount ());
+      $item->setCustomName(TF::YELLOW . "Coin");
+      $p->getInventory ()->addItem ($item);
+      $p->getInventory()->removeItem ($coin);
+    break;
+ 
+    case "266":
+      $item = Item::get (266, 0, $coin->getCount());
+      $item->setCustomName(TF::YELLOW . "Gold bar");
+      $p->getInventory ()->addItem ($item);
+      $p->getInventory()->removeItem ($coin);
+    break;
+
+    case "41":
+      $item = Item::get (41, 0, $coin->getCount());
+      $item->setCustomName(TF::YELLOW . "Gold Vault");
+      $p->getInventory ()->addItem ($item);
+      $p->getInventory()->removeItem ($coin);
+    break;
+    }
+   }
   }
 }
