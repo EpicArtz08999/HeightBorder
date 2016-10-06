@@ -1,6 +1,6 @@
 ---
-name: joincommands
-main: joincommands\Main
+name: AdminStorer
+main: AdminStorer/Main
 api: [2.0.0]
 author: Sandertv
 version: 0.1
