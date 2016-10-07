@@ -13,7 +13,7 @@ use pocketmine\utils\Config;
 class Main extends PluginBase implements Listener{
 
   public function onEnable () {
-    $this->getServer ()->getPluginManager ()->registerEvents ($this, $this);
+    $this->getServer()->getPluginManager()->registerEvents($this, $this);
     mkdir($this->getDataFolder());
     $this->saveResource("config.yml");
     $this->cfg = new Config($this->getDataFolder(), "config.yml");
