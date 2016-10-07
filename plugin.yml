@@ -4,4 +4,9 @@ main: HeightBorder/Main
 api: [2.0.0]
 author: Sandertv
 version: 0.1
+
+permissions:
+  heightlimit.bypass:
+    description: Allows bypassing the height limit
+    default: op
 ...
