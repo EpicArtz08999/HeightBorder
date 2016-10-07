@@ -21,4 +21,9 @@ class Main extends PluginBase implements Listener{
   public function onEnable () {
     $this->getServer ()->getPluginManager ()->registerEvents ($this, $this);
   }
+
+  public function onMove(PlayerMoveEvent $event) {
+    $p = $event->getPlayer();
+    $l = $p->getLevel();
+  }
 }
