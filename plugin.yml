@@ -1,6 +1,6 @@
 ---
-name: AdminStorer
-main: AdminStorer/Main
+name: HeigtBorder
+main: HeightBorder/Main
 api: [2.0.0]
 author: Sandertv
 version: 0.1
