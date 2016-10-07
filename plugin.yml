@@ -1,5 +1,5 @@
 ---
-name: HeigtBorder
+name: HeightBorder
 main: HeightBorder/Main
 api: [2.0.0]
 author: Sandertv
