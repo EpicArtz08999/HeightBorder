@@ -1,6 +1,6 @@
 <?php
 
-namespace AdminStorer;
+namespace HeightBorder;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
@@ -20,16 +20,5 @@ class Main extends PluginBase implements Listener{
 
   public function onEnable () {
     $this->getServer ()->getPluginManager ()->registerEvents ($this, $this);
-    mkdir($this->getDataFolder());
-    $this->cfg = new Config($this->getDataFolder() . "admins.yml");
-    $admins = scandir("plugins/PurePerms/players/");
-    foreach($admins as $admin) {
-      if($admin != "." && $admin != "..") {
-        $this->admin = new Config("plugins/PurePerms/players/");
-        if($this->admin->get("group") == "Admin") {
-         
-        }
-      }
-    }
   }
 }
