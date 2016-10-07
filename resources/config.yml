@@ -1,4 +1,4 @@
 ---
-Worlds: []
+Worlds: ["world1", "world2"]
 HeightLimit: 128
 ...
