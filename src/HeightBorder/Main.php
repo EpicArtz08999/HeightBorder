@@ -26,6 +26,7 @@ class Main extends PluginBase implements Listener{
       if(!$p->hasPermission("worldborder.bypass")) {
         if($p->y >= $this->cfg->get("HeightLimit")) {
           $p->teleport($p->x, $p->y - 1, $p->z);
+          $p->sendMessage(TF::RED . "You have crossed the height limit!");
         }
       }
     }  
