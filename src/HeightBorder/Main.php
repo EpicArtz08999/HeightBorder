@@ -23,7 +23,11 @@ class Main extends PluginBase implements Listener{
     $p = $event->getPlayer();
     $l = $p->getLevel();
     if(in_array($l->getName(), $this->cfg->get("Worlds", array()))) {
-      
+      if(!$p->hasPermission("worldborder.bypass")) {
+        if($p->y >= $this->cfg->get("MaximumHeight")) {
+          
+        }
+      }
     }  
   }
 }
