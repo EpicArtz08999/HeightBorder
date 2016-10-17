@@ -14,7 +14,7 @@ class Main extends PluginBase implements Listener{
 
   public function onEnable () {
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    mkdir($this->getDataFolder());
+    @mkdir($this->getDataFolder());
     $this->saveResource("config.yml");
     $this->cfg = new Config($this->getDataFolder(), "config.yml");
   }
@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener{
     if(in_array($l->getName(), $this->cfg->get("Worlds", array()))) {
       if(!$p->hasPermission("heightlimit.bypass")) {
         if($p->y >= $this->cfg->get("HeightLimit")) {
-          $p->teleport($p->x, $p->y - 1, $p->z);
+          $event->setCancelled();
           $p->sendMessage(TF::RED . "You have crossed the height limit!");
         }
       }
